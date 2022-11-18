@@ -12,7 +12,7 @@ import { createProduct } from './useCases/products/createProduct'
 import { listOrders } from './useCases/orders/listOrders'
 import { createOrder } from './useCases/orders/createOrder'
 import { updateOrderStatus } from './useCases/orders/updateOrderStatus'
-import { cancelOrder } from './useCases/orders/CancelOrder'
+import { deleteOrder } from './useCases/orders/deleteOrder'
 
 const router = Router()
 
@@ -52,6 +52,6 @@ router.post('/orders', createOrder)
 router.patch('/orders/:orderId', updateOrderStatus)
 
 // [DELETE] - Delete or cancel an order
-router.delete('/orders/:orderId', cancelOrder)
+router.delete('/orders/:orderId', deleteOrder)
 
 export default router
