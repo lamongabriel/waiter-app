@@ -1,16 +1,16 @@
 [
 	{
-		"_id": "28a183e0-7747-4c70-a678-2e05cb55a0c4",
+		"_id": { "$oid": "5e8508ea69a10e42d07414be" },
 		"name": "Pizzas",
 		"icon": "🍕"
 	},
 	{
-		"_id": "2f6f8743-797b-452f-87d5-124edd9d6e56",
+		"_id": { "$oid": "637d33198f1eb5ef61d9380d" },
 		"name": "Beverages",
 		"icon": "🥃"
 	},
 	{
-		"_id": "c89fee0c-fb1e-44b4-94a5-3b48319cf1a3",
+		"_id": { "$oid": "637d332261cf6f2c9b2822fe" },
 		"name": "Hamburgers",
 		"icon": "🍔"
 	}
