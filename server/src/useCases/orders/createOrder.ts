@@ -7,8 +7,6 @@ export async function createOrder (req: Request, res: Response) {
 	try {
 		const { table, products } = req.body
 
-		console.log
-
 		const createdOrder = await Order.create({
 			table,
 			products

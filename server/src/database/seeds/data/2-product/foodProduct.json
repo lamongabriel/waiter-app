@@ -1,0 +1,119 @@
+[
+	{
+		"_id": "681908ea-4652-4d89-a0ce-6280766ff582",
+		"name": "Coke",
+		"description": "Delicious Coke Can 12oz (330ml)",
+		"imagePath": "/uploads/default-coke.png",
+		"price": 2,
+		"category": "2f6f8743-797b-452f-87d5-124edd9d6e56",
+		"ingredients": []
+	},
+	{
+		"_id": "b2cd14c4-1ec0-41cb-9293-99a2708021c6",
+		"name": "Orange Juice",
+		"description": "Orange juice made from the best oranges out there.",
+		"imagePath": "/uploads/default-orange-juice.png",
+		"price": 3,
+		"category": "2f6f8743-797b-452f-87d5-124edd9d6e56",
+		"ingredients": [
+			"🍊 Orange",
+			"🥄 Sugar"
+		]
+	},
+	{
+		"_id": "53ec31e3-d032-4324-bfa4-52cc6400e5b2",
+		"name": "Romanian beer",
+		"description": "A great way of cooling down and enjoying the summer at its best.",
+		"imagePath": "/uploads/defaut-beer.png",
+		"price": 3,
+		"category": "2f6f8743-797b-452f-87d5-124edd9d6e56",
+		"ingredients": []
+	},
+	{
+		"_id": "9ea50d91-daf3-4860-92bd-1546ed35e1f8",
+		"name": "Cheeseburger with sauce",
+		"description": "2 burgers with a lot of sauce",
+		"imagePath": "/uploads/default-cheeseburger.png",
+		"price": 10,
+		"category": "c89fee0c-fb1e-44b4-94a5-3b48319cf1a3",
+		"ingredients": [
+			"🍖 Beef",
+			"😋 Rosé sauce",
+			"🥒'Pickles",
+			"🧅 Onions",
+			"🍅 Tomatos"
+		]
+	},
+	{
+		"_id": "4b577050-a8ec-4e48-83e4-20b084a1a55e",
+		"name": "Chicken cheeseburger",
+		"description": "Fried chicken, cooked eggs and french fries.",
+		"imagePath": "/uploads/default-chicken-burger.png",
+		"price": 8,
+		"category": "c89fee0c-fb1e-44b4-94a5-3b48319cf1a3",
+		"ingredients": [
+			"🐔 Fried chicken",
+			"🍳 Cooked eggs",
+			"🍟 French fries",
+			"🍅 Tomatos",
+			"🥬 Lettuce"
+		]
+	},
+	{
+		"_id": "3d7021aa-6680-45e7-b824-8b76631596b0",
+		"name": "Egg cheeseburger",
+		"description": "Egg, cheese and meat, everything you need.",
+		"imagePath": "/uploads/default-egg-burger.png",
+		"price": 5,
+		"category": "c89fee0c-fb1e-44b4-94a5-3b48319cf1a3",
+		"ingredients": [
+			"🍖 Beef",
+			"🍳 Cooked eggs",
+			"😋 Ham",
+			"🍟 French fries"
+		]
+	},
+	{
+		"_id": "b1d1622a-d02a-4a1d-a310-15563d987c93",
+		"name": "Tuscan Chicken & Cheese Pizza",
+		"description": "Our doughy crust is piled high with flavors from chicken breast simmered with bell peppers and rosemary.",
+		"imagePath": "/uploads/default-chicken-pizza.png",
+		"price": 12,
+		"category": "28a183e0-7747-4c70-a678-2e05cb55a0c4",
+		"ingredients": [
+			"🐔 Chicken breast",
+			"🧀 Cheese",
+			"🍅 Tomato sauce",
+			"🧅 Onions"
+		]
+	},
+	{
+		"_id": "3a521dbd-b8dd-41de-8eeb-28992b2e0caa",
+		"name": "4 Cheese pizza (Quattro formaggi)",
+		"description": "If you're looking for an ultra cheesy pizza then look no further than this classic!",
+		"imagePath": "/uploads/default-fourcheese-pizza.png",
+		"price": 12,
+		"category": "28a183e0-7747-4c70-a678-2e05cb55a0c4",
+		"ingredients": [
+			"🍅 Tomato sauce",
+			"🧀 Mozzarella cheese",
+			"🧀 Gongonzola cheese",
+			"🧀 Parmesan cheese",
+			"🧀 Goat cheese"
+		]
+	},
+	{
+		"_id": "20a87bad-ffd9-4326-aad5-cfb9ef8c4864",
+		"name": "Margherita pizza",
+		"description": "Nothing nicer than a perfect slice of margherita pizza.",
+		"imagePath": "/uploads/default-margerita-pizza.png",
+		"price": 12,
+		"category": "28a183e0-7747-4c70-a678-2e05cb55a0c4",
+		"ingredients": [
+			"🍅 Tomato sauce",
+			"🧀 Mozzarella cheese",
+			"🍃 Fresh basil",
+			"😎 Olives"
+		]
+	}
+]

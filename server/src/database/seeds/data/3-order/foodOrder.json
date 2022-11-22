@@ -1,0 +1,17 @@
+{
+	"products": [
+		{
+			"product": "681908ea-4652-4d89-a0ce-6280766ff582",
+			"quantity": 2
+		},
+		{
+			"product": "9ea50d91-daf3-4860-92bd-1546ed35e1f8",
+			"quantity": 1
+		},
+		{
+			"product": "3a521dbd-b8dd-41de-8eeb-28992b2e0caa",
+			"quantity": 1
+		}
+	],
+	"table": "5"
+}

@@ -1,0 +1,17 @@
+[
+	{
+		"_id": "28a183e0-7747-4c70-a678-2e05cb55a0c4",
+		"name": "Pizzas",
+		"icon": "🍕"
+	},
+	{
+		"_id": "2f6f8743-797b-452f-87d5-124edd9d6e56",
+		"name": "Beverages",
+		"icon": "🥃"
+	},
+	{
+		"_id": "c89fee0c-fb1e-44b4-94a5-3b48319cf1a3",
+		"name": "Hamburgers",
+		"icon": "🍔"
+	}
+]
