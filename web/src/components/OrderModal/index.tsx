@@ -31,7 +31,7 @@ export function OrderModal ({ visible, order, onClose }: OrderModalProps) {
     }
 
     function handleMousePress (e: any) {
-      if (e.currentTarget.dataset.type === 'overlay') {
+      if (e.target.dataset?.type === 'overlay') {
         onClose()
       }
     }

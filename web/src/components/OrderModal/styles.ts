@@ -40,6 +40,10 @@ export const OrderModalContainer = styled.div`
 		margin-top: 2rem;
 	}
 
+	strong {
+		line-break: normal;
+	}
+
 	h1 {
 		font-weight: 600;
 		font-size: 1.5rem;
