@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "expo": "~47.0.8",
+    "expo-font": "^11.0.1",
     "expo-status-bar": "~1.4.2",
+    "intl": "^1.2.5",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-native": "0.70.5",
@@ -23,11 +25,15 @@
     "@types/react": "~18.0.14",
     "@types/react-native": "~0.70.6",
     "@types/styled-components-react-native": "^5.2.0",
-    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.44.0",
-    "eslint": "^8.28.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.31.11",
-    "typescript": "^4.6.3"
+    "typescript": "*"
   },
   "private": true
 }
