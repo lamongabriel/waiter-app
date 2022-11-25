@@ -13,6 +13,13 @@ export const Container = styled.SafeAreaView`
 export const ContainerMargin = styled.View`
 	margin-left: 24px;
 	margin-right: 24px;
+	flex: 1
+`
+
+export const CenteredContainer = styled.View`
+	flex: 1;
+	justify-content: center;
+	align-items: center;
 `
 
 export const CategoriesContainer = styled.View`
@@ -21,10 +28,10 @@ export const CategoriesContainer = styled.View`
 `
 
 export const Footer = styled.View`
-	min-height: 110px;
+	min-height: 90px;
 	background-color: ${THEME.COLORS.FOOTER_COLOR};
-	padding: ${isAndroid ? '24px' : '16px'} 24px;
+	padding: 16px 24px 28px;
 `
 
-export const FooterContainer = styled.SafeAreaView`
+export const FooterContainer = styled.View`
 `

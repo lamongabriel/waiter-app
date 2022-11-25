@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Modal, TouchableOpacity, Platform, ModalProps } from 'react-native'
-import { THEME } from '../../theme'
+
 import { Button } from '../Button'
 import { Close } from '../Icons/Close'
 import { Text } from '../Text'
@@ -12,6 +12,7 @@ import {
   TableModalForm,
   TableModalInput
 } from './styles'
+import { THEME } from '../../theme'
 
 interface TableModalProps extends ModalProps {
   visible: boolean
@@ -23,6 +24,7 @@ export function TableModal ({ visible, onClose, onSave, ...rest }: TableModalPro
   const [tableNumber, setTableNumber] = useState('')
 
   function handleSave () {
+    setTableNumber('')
     onSave(tableNumber)
     onClose()
   }
@@ -30,6 +32,7 @@ export function TableModal ({ visible, onClose, onSave, ...rest }: TableModalPro
   return (
 		<Modal
 			transparent
+			statusBarTranslucent={true}
 			animationType='fade'
 			visible={visible}
 			{...rest}

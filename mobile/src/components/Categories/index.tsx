@@ -1,5 +1,5 @@
-import { FlatList } from 'react-native'
 import { useState } from 'react'
+import { FlatList } from 'react-native'
 import { Text } from '../Text'
 
 import { categories } from '../../mocks/categories'

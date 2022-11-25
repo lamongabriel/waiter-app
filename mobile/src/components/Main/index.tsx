@@ -1,26 +1,45 @@
 import { useState } from 'react'
+import { ActivityIndicator } from 'react-native'
+
+import { useCart } from '../../hooks/useCart'
+
+import { Button } from '../Button'
+import { Cart } from '../Cart'
+import { Categories } from '../Categories'
+import { Header } from '../Header'
+import { Menu } from '../Menu'
+import { TableModal } from '../TableModal'
+import { Text } from '../Text'
+
+// import { products } from '../../mocks/products'
 
 import {
   Container,
   CategoriesContainer,
   Footer,
   FooterContainer,
-  ContainerMargin
+  ContainerMargin,
+  CenteredContainer
 } from './styles'
-
-import { Button } from '../Button'
-import { Categories } from '../Categories'
-import { Header } from '../Header'
-import { Menu } from '../Menu'
-import { TableModal } from '../TableModal'
+import { THEME } from '../../theme'
+import { Empty } from '../Icons/Empty'
 
 export function Main () {
   const [isTableModalVisible, setIsTableModalVisible] = useState(false)
-  const [tableNumber, setTableNumber] = useState('')
+  const [isLoading] = useState(false)
 
-  function handleSaveTableNumber (table: string) {
-    setTableNumber(table)
+  const { resetCart, selectedTable, setSelectedTable } = useCart()
+
+  function handleSaveselectedTable (table: string) {
+    setSelectedTable(table)
   }
+
+  function handleNewOrder () {
+    resetCart()
+    setIsTableModalVisible(true)
+  }
+
+  const products = []
 
   return (
 		<>
@@ -29,26 +48,51 @@ export function Main () {
 
 					<Header />
 
-					<CategoriesContainer>
-						<Categories />
-					</CategoriesContainer>
+					{isLoading && (
+						<CenteredContainer>
+							<ActivityIndicator color={THEME.COLORS.PRIMARY_RED} size='large' />
+						</CenteredContainer>
+					)}
 
-					<Menu />
+					{!isLoading && (
+						<>
+							<CategoriesContainer>
+								<Categories />
+							</CategoriesContainer>
+
+							{products.length > 0
+							  ? <Menu
+										openTableModal={() => setIsTableModalVisible(true)}
+										products={products}
+									/>
+							  :	<CenteredContainer>
+										<Empty/>
+										<Text
+											color={THEME.COLORS.LIGHT_GRAY}
+											style={{ marginTop: 24 }}
+										>
+											No products were found.
+										</Text>
+									</CenteredContainer>
+							}
+						</>
+					)}
 
 				</ContainerMargin>
 			</Container>
 
 			<Footer>
 				<FooterContainer>
-					{!tableNumber && <Button onPress={() => setIsTableModalVisible(true)} title='New order'/>}
+					{!selectedTable && <Button onPress={handleNewOrder} disabled={isLoading} title='New order'/>}
+					{selectedTable && <Cart />}
 				</FooterContainer>
 			</Footer>
 
 			<TableModal
 				visible={isTableModalVisible}
 				onClose={() => setIsTableModalVisible(false)}
-				onSave={handleSaveTableNumber}
-				/>
+				onSave={handleSaveselectedTable}
+			/>
 		</>
   )
 }

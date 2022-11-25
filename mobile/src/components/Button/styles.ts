@@ -1,14 +1,17 @@
 import styled from 'styled-components/native'
-import { THEME } from '../../theme'
 
-export const ButtonContainer = styled.TouchableOpacity`
+interface ButtonStyleProps {
+  disabled: boolean
+  bgColor: string
+}
+
+export const ButtonContainer = styled.TouchableOpacity<ButtonStyleProps>`
 	height: 44px;
-	width: 100%;
-	display: flex;
+	align-self: stretch;
 	justify-content: center;
 	align-items: center;
 	padding: 0 24px;
-	background-color: ${({ disabled }) => disabled ? '#999' : THEME.COLORS.PRIMARY_RED};
+	background-color: ${({ disabled, bgColor }) => disabled ? '#999' : bgColor};
 	filter:	brightness(50%);
 	border-radius: 48px;
 `

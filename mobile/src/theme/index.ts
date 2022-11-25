@@ -1,7 +1,7 @@
 export const THEME = {
   COLORS: {
     BACKGROUND_COLOR: '#FAFAFA',
-    FOOTER_COLOR: '#FFFFFF',
+    FOOTER_COLOR: '#f2f2f2',
     PRIMARY_RED: '#D73035',
     DARK_GRAY: '#333333',
     LIGHT_GRAY: '#666666'

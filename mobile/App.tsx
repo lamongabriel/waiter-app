@@ -5,6 +5,8 @@ import { StatusBar } from 'expo-status-bar'
 import 'intl'
 import 'intl/locale-data/jsonp/en-US'
 
+import { CartContextProvider } from './src/contexts/CartContext'
+
 export default function App () {
   const [fontsLoaded] = useFonts({
     'GeneralSans-400': require('./src/assets/fonts/GeneralSans-Regular.otf'),
@@ -19,7 +21,9 @@ export default function App () {
   return (
 		<>
 			<StatusBar style='dark'/>
-			<Main />
+			<CartContextProvider>
+				<Main />
+			</CartContextProvider>
 		</>
   )
 }
