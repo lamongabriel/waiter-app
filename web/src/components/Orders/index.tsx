@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 
-import socketIo from 'socket.io-client'
-
-import { api } from '../../lib/api'
-import { Order } from '../../types/Order'
 import { OrdersBoard } from '../OrdersBoard'
+
+import socketIo from 'socket.io-client'
+import { api } from '../../lib/api'
+
+import { Order } from '../../types/Order'
+
 import { Container } from './styles'
 
 export function Orders () {

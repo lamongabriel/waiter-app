@@ -1,3 +1,9 @@
+import { useEffect } from 'react'
+
+import { Order } from '../../types/Order'
+
+import { convertToMonetary } from '../../utils/convertToMonetary'
+
 import {
   OrderModalContainer,
   OrderModalOverlay,
@@ -8,9 +14,6 @@ import {
 } from './styles'
 
 import closeIcon from '../../assets/images/close-icon.svg'
-import { Order } from '../../types/Order'
-import { convertToMonetary } from '../../utils/convertToMonetary'
-import React, { useEffect } from 'react'
 
 interface OrderModalProps {
   visible: boolean

@@ -15,7 +15,6 @@ import { Empty } from '../Icons/Empty'
 import { ICategory } from '../../types/category'
 import { IProduct } from '../../types/product'
 
-// import { products } from '../../mocks/products'
 import { api } from '../../lib/api'
 
 import {

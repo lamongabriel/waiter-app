@@ -1,10 +1,13 @@
-import { Order } from '../../types/Order'
-import { Board, BoardData, BoardHeader } from './styles'
-import { OrderModal } from '../OrderModal'
 import { useState } from 'react'
-import { api } from '../../lib/api'
+
+import { Order } from '../../types/Order'
+import { OrderModal } from '../OrderModal'
+
 import { toast } from 'react-toastify'
 
+import { api } from '../../lib/api'
+
+import { Board, BoardData, BoardHeader } from './styles'
 interface OrderBoardProps {
   emoji: string
   title: string
