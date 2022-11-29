@@ -9,9 +9,9 @@
 <p>WaiterAPP it's the application for the restaurants owners. Developed to make your life easier and manage your client's orders.</p>
 
 <div align="center" style="display: flex">
-  <img src="./.github/mob_1.jpg" />
-  <img src="./.github/mob_3.jpg" />
-  <img src="./.github/mob_4.jpg" />
+  <img style="width: 200px" src="./.github/mob_1.jpg" />
+  <img style="width: 200px" src="./.github/mob_3.jpg" />
+  <img style="width: 200px" src="./.github/mob_4.jpg" />
 </div>
 
 # Index
@@ -56,6 +56,8 @@ The heart of this application is the mobile, browse through all the available pr
   - Send orders to the kitchen to cook.
 
 <a id="technologies"></a>
+
+<img src="./.github/dashboard.png">
 
 ## :rocket: Technologies
 
