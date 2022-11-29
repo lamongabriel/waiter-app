@@ -127,8 +127,14 @@ export const OrderModalOptions = styled.footer`
 
 	button{
 
+		&:disabled{
+			filter: grayscale(100);
+			cursor: not-allowed;
+			opacity: 0.5;
+		}
+
 		transition: transform 200ms;
-		&:hover{
+		&:hover:not(:disabled){
 			transform: scale(1.05);
 		}
 

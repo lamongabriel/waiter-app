@@ -1,6 +1,7 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import path from 'node:path'
+import cors from 'cors'
 
 import { connectToMongo } from './database/mongo'
 
@@ -15,6 +16,8 @@ const server = async () => {
 
 	// static folder
 	app.use('/uploads', express.static(path.resolve(__dirname, '..', 'uploads')))
+
+	app.use(cors())
 
 	// middlewares
 	app.use(express.json())

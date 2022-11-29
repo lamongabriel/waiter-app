@@ -16,9 +16,12 @@ interface OrderModalProps {
   visible: boolean
   order: Order
   onClose: () => void
+  onCancelOrder: () => Promise<void>
+  onChangeOrderStatus: () => Promise<void>
+  isLoading: boolean
 }
 
-export function OrderModal ({ visible, order, onClose }: OrderModalProps) {
+export function OrderModal ({ visible, order, onClose, onCancelOrder, isLoading, onChangeOrderStatus }: OrderModalProps) {
   if (!visible || !order) {
     return null
   }
@@ -104,12 +107,22 @@ export function OrderModal ({ visible, order, onClose }: OrderModalProps) {
 				</OrderModalTotal>
 
 				<OrderModalOptions>
-					<button>
-						{order.status === 'WAITING' && '👩‍🍳 Start cooking'}
-						{order.status === 'IN_PRODUCTION' && '✅ Order is ready!'}
-						{order.status === 'DONE' && '✅ Order is ready!'}
-					</button>
-					<button>
+					{order.status !== 'DONE' && (
+						<button
+							type='button'
+							disabled={isLoading}
+							onClick={onChangeOrderStatus}
+						>
+							{order.status === 'WAITING' && '👩‍🍳 Start cooking'}
+							{order.status === 'IN_PRODUCTION' && '✅ Order is ready!'}
+						</button>
+					)}
+
+					<button
+						type='button'
+						onClick={onCancelOrder}
+						disabled={isLoading}
+					>
 						Cancel order
 					</button>
 				</OrderModalOptions>
