@@ -16,7 +16,8 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': 'off',
         'no-tabs': 'off',
         'no-mixed-spaces-and-tabs': 'off',
-        '@typescript-eslint/consistent-type-assertions': 'off'
+        '@typescript-eslint/consistent-type-assertions': 'off',
+        '@typescript-eslint/no-non-null-assertion': 'off'
       }
     }
   ],

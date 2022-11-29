@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react'
+
+import socketIo from 'socket.io-client'
+
 import { api } from '../../lib/api'
 import { Order } from '../../types/Order'
 import { OrdersBoard } from '../OrdersBoard'
@@ -8,8 +11,18 @@ export function Orders () {
   const [orders, setOrders] = useState<Order[]>([])
 
   useEffect(() => {
+    const io = socketIo('http://192.168.101.7:3001', {
+      transports: ['websocket']
+    })
+
+    io.on('orders@new', (order) => {
+      setOrders(prev => prev.concat(order))
+    })
+  }, [])
+
+  useEffect(() => {
     api.get('/orders').then(({ data }) => setOrders(data))
-  })
+  }, [])
 
   const waiting = orders.filter(order => order.status === 'WAITING')
   const inProduction = orders.filter(order => order.status === 'IN_PRODUCTION')
