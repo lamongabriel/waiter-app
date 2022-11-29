@@ -47,9 +47,10 @@ export function Menu ({ openTableModal, products }: MenuProps) {
 			/>
 			<FlatList
 				data={products}
-				contentContainerStyle={{ paddingVertical: 32 }}
+				contentContainerStyle={{ paddingBottom: 32, paddingTop: 8 }}
 				keyExtractor={product => product._id}
 				ItemSeparatorComponent={Separator}
+				showsVerticalScrollIndicator={false}
 				renderItem={({ item: product }) => (
 					<Product onPress={() => handleOpenProductModal(product)}>
 

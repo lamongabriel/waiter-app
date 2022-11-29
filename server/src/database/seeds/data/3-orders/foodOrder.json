@@ -1,17 +1,19 @@
 {
 	"products": [
 		{
-			"product": "637d3390316b33a3872c629e",
+			"product": { "$oid": "637d3390316b33a3872c629e" },
 			"quantity": 2
 		},
 		{
-			"product": "637d33b204fa07a63af3947c",
+			"product": { "$oid": "637d33b204fa07a63af3947c" },
 			"quantity": 3
 		},
 		{
-			"product": "637d3399cca2e48eeaa6e8ca",
+			"product": { "$oid": "637d3399cca2e48eeaa6e8ca" },
 			"quantity": 1
 		}
 	],
-	"table": "5"
+	"table": "5",
+	"status": "WAITING",
+	"createdAt": "2022-11-29T14:32:12.472+00:00"
 }

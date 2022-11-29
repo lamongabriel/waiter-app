@@ -15,7 +15,7 @@ export const OrderHeader = styled.View`
 
 export const Table = styled.View`
 	background: #fff;
-	padding: 16px;
+	padding: 12px;
 	border: 1px solid rgba(204, 204, 204, 0.3);
-	margin-top: 24px;
+	margin-top: 16px;
 `

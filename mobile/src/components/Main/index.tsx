@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ActivityIndicator } from 'react-native'
 
 import { useCart } from '../../hooks/useCart'
@@ -10,8 +10,13 @@ import { Header } from '../Header'
 import { Menu } from '../Menu'
 import { TableModal } from '../TableModal'
 import { Text } from '../Text'
+import { Empty } from '../Icons/Empty'
+
+import { ICategory } from '../../types/category'
+import { IProduct } from '../../types/product'
 
 // import { products } from '../../mocks/products'
+import { api } from '../../lib/api'
 
 import {
   Container,
@@ -22,11 +27,14 @@ import {
   CenteredContainer
 } from './styles'
 import { THEME } from '../../theme'
-import { Empty } from '../Icons/Empty'
 
 export function Main () {
   const [isTableModalVisible, setIsTableModalVisible] = useState(false)
-  const [isLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+  const [isLoadingProducts, setIsLoadingProducts] = useState(false)
+
+  const [categories, setCategories] = useState<ICategory[]>([])
+  const [products, setProducts] = useState<IProduct[]>([])
 
   const { resetCart, selectedTable, setSelectedTable } = useCart()
 
@@ -39,7 +47,34 @@ export function Main () {
     setIsTableModalVisible(true)
   }
 
-  const products = []
+  useEffect(() => {
+    try {
+      Promise.all([
+        api.get<ICategory[]>('/categories'),
+        api.get<IProduct[]>('/products')
+      ]).then(([categoriesResponse, productsResponse]) => {
+        setCategories(categoriesResponse.data)
+        setProducts(productsResponse.data)
+        setIsLoading(false)
+      })
+    } catch {}
+  }, [])
+
+  async function handleSelectCategory (categoryId: string) {
+    setIsLoadingProducts(true)
+    const url = categoryId
+      ? `/categories/${categoryId}/products`
+      : '/products'
+
+    try {
+      const response = await api.get(url)
+      setProducts(response.data)
+    } catch (error) {
+      console.log(error)
+    } finally {
+      setIsLoadingProducts(false)
+    }
+  }
 
   return (
 		<>
@@ -57,23 +92,32 @@ export function Main () {
 					{!isLoading && (
 						<>
 							<CategoriesContainer>
-								<Categories />
+								<Categories categories={categories} onSelectCategory={handleSelectCategory} />
 							</CategoriesContainer>
 
-							{products.length > 0
-							  ? <Menu
-										openTableModal={() => setIsTableModalVisible(true)}
-										products={products}
-									/>
-							  :	<CenteredContainer>
-										<Empty/>
-										<Text
-											color={THEME.COLORS.LIGHT_GRAY}
-											style={{ marginTop: 24 }}
-										>
-											No products were found.
-										</Text>
+							{isLoadingProducts
+							  ? <CenteredContainer>
+										<ActivityIndicator color={THEME.COLORS.PRIMARY_RED} size='large' />
 									</CenteredContainer>
+							  : (
+									<>
+										{products.length > 0
+										  ? <Menu
+													openTableModal={() => setIsTableModalVisible(true)}
+													products={products}
+												/>
+										  :	<CenteredContainer>
+													<Empty/>
+													<Text
+														color={THEME.COLORS.LIGHT_GRAY}
+														style={{ marginTop: 24 }}
+													>
+														No products were found.
+													</Text>
+												</CenteredContainer>
+										}
+									</>
+							    )
 							}
 						</>
 					)}

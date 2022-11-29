@@ -24,8 +24,10 @@ import {
 } from './styles'
 import { THEME } from '../../theme'
 
+import { api } from '../../lib/api'
+
 export function Cart () {
-  const { cart, addProduct, removeProduct } = useCart()
+  const { cart, addProduct, removeProduct, selectedTable } = useCart()
 
   const [isOCModalOpen, setIsOCModalOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
@@ -36,8 +38,24 @@ export function Cart () {
     return items.reduce((acc, cur) => (acc += cur.quantity * cur.product.price), 0)
   }
 
-  function handleConfirmOrder () {
-    setIsOCModalOpen(true)
+  async function handleConfirmOrder () {
+    try {
+      setIsLoading(true)
+      const payload = {
+        table: selectedTable,
+        products: cart.map(cartItem => ({
+          product: cartItem.product._id,
+          quantity: cartItem.quantity
+        }))
+      }
+
+      await api.post('/orders', payload)
+      setIsOCModalOpen(true)
+    } catch (error) {
+
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (

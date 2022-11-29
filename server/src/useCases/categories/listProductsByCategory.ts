@@ -7,9 +7,7 @@ export async function listProductsByCategory (req: Request, res: Response) {
 	try {
 		const categoryId = req.params.categoryId
 
-		const products = await Product.find({
-			category: categoryId
-		})
+		const products = await Product.find().where('category').equals(categoryId)
 
 		if(products.length > 0) {
 			return res.status(200).json(products)

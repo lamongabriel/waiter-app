@@ -2,17 +2,17 @@
 	{ "_id": { "$oid": "637d3390316b33a3872c629e" },
 		"name": "Coke",
 		"description": "Delicious Coke Can 12oz (330ml)",
-		"imagePath": "/uploads/default-coke.png",
+		"imagePath": "default-coke.png",
 		"price": 2,
-		"category": "637d33198f1eb5ef61d9380d",
+		"category": { "$oid": "637d33198f1eb5ef61d9380d" },
 		"ingredients": []
 	},
 	{ "_id": { "$oid": "637d3399cca2e48eeaa6e8ca" },
 		"name": "Orange Juice",
 		"description": "Orange juice made from the best oranges out there.",
-		"imagePath": "/uploads/default-orange-juice.png",
+		"imagePath": "default-orange-juice.png",
 		"price": 3,
-		"category": "637d33198f1eb5ef61d9380d",
+		"category": { "$oid": "637d33198f1eb5ef61d9380d" },
 		"ingredients": [
 			{
 				"icon": "🍊",
@@ -27,17 +27,17 @@
 	{ "_id": { "$oid": "637d339cec1dc2ed36b983ec" },
 		"name": "Romanian beer",
 		"description": "A great way of cooling down and enjoying the summer at its best.",
-		"imagePath": "/uploads/defaut-beer.png",
+		"imagePath": "defaut-beer.png",
 		"price": 3,
-		"category": "637d33198f1eb5ef61d9380d",
+		"category": { "$oid": "637d33198f1eb5ef61d9380d" },
 		"ingredients": []
 	},
 	{ "_id": { "$oid": "637d33e0a3204a0b2b997a4f" },
 		"name": "Cheeseburger with sauce",
 		"description": "2 burgers with a lot of sauce",
-		"imagePath": "/uploads/default-cheeseburger.png",
+		"imagePath": "default-cheeseburger.png",
 		"price": 10,
-		"category": "637d332261cf6f2c9b2822fe",
+		"category": { "$oid": "637d332261cf6f2c9b2822fe" },
 		"ingredients": [
 			{
 				"icon": "🍖",
@@ -64,9 +64,9 @@
 	{ "_id": { "$oid": "637d33e6ce62796c2f4288c5" },
 		"name": "Chicken cheeseburger",
 		"description": "Fried chicken, cooked eggs and french fries.",
-		"imagePath": "/uploads/default-chicken-burger.png",
+		"imagePath": "default-chicken-burger.png",
 		"price": 8,
-		"category": "637d332261cf6f2c9b2822fe",
+		"category": { "$oid": "637d332261cf6f2c9b2822fe" },
 		"ingredients": [
 			{
 				"icon": "🐔",
@@ -93,9 +93,9 @@
 	{ "_id": { "$oid": "637d33bc9e5e0bf209ea140a" },
 		"name": "Egg cheeseburger",
 		"description": "Egg, cheese and meat, everything you need.",
-		"imagePath": "/uploads/default-egg-burger.png",
+		"imagePath": "default-egg-burger.png",
 		"price": 5,
-		"category": "637d332261cf6f2c9b2822fe",
+		"category": { "$oid": "637d332261cf6f2c9b2822fe" },
 		"ingredients": [
 			{
 				"icon": "🍖",
@@ -118,9 +118,9 @@
 	{ "_id": { "$oid": "637d33ae8959a9df7e6875ac" },
 		"name": "Tuscan Chicken & Cheese Pizza",
 		"description": "Our doughy crust is piled high with flavors from chicken breast simmered with bell peppers and rosemary.",
-		"imagePath": "/uploads/default-chicken-pizza.png",
+		"imagePath": "default-chicken-pizza.png",
 		"price": 12,
-		"category": "5e8508ea69a10e42d07414be",
+		"category": { "$oid": "5e8508ea69a10e42d07414be" },
 		"ingredients": [
 			{
 				"icon": "🐔",
@@ -143,9 +143,9 @@
 	{ "_id": { "$oid": "637d33b204fa07a63af3947c" },
 		"name": "4 Cheese pizza (Quattro formaggi)",
 		"description": "If you're looking for an ultra cheesy pizza then look no further than this classic!",
-		"imagePath": "/uploads/default-fourcheese-pizza.png",
+		"imagePath": "default-fourcheese-pizza.png",
 		"price": 12,
-		"category": "5e8508ea69a10e42d07414be",
+		"category": { "$oid": "5e8508ea69a10e42d07414be" },
 		"ingredients": [
 			{
 				"icon": "🍅",
@@ -172,9 +172,9 @@
 	{ "_id": { "$oid": "637d33b64846e170bfeef046" },
 		"name": "Margherita pizza",
 		"description": "Nothing nicer than a perfect slice of margherita pizza.",
-		"imagePath": "/uploads/default-margerita-pizza.png",
+		"imagePath": "default-margerita-pizza.png",
 		"price": 12,
-		"category": "5e8508ea69a10e42d07414be",
+		"category": { "$oid": "5e8508ea69a10e42d07414be" },
 		"ingredients": [
 			{
 				"icon": "🍅",
