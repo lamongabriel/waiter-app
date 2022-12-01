@@ -93,6 +93,7 @@ This project is fully developed and properly working but it could have some chan
   - Is **required** to install **[Node.js](https://nodejs.org/en/)**
   - Is **required** to install **[Expo](https://expo.dev//)**
   - In order to run scripts and install dependencies you need to install a **package manager**, like i'm using yarn.
+  - Use the API documentation [here](https://www.postman.com/aviation-engineer-98152668/workspace/waiter-app/api/6573c07f-5fc9-4c2b-a3c7-cf850c0594da)
 
 1. First step, clone this github repository:
 
